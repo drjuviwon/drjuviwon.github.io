@@ -39,7 +39,8 @@
       top: 0; left: 0;
       width: 100%;
       z-index: 100;
-      padding: 22px 0;
+
+      padding: 14px 0;  /* ✅ 여백 줄임 */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -48,13 +49,11 @@
       backdrop-filter: blur(2px);
     }
 
-    /* ✅ 로고 이미지 */
+    /* ✅ 로고 크기 확실히 축소 */
     .logo {
-      height: 14px;     /* 필요하면 24~34로 조절 */
+      height: 16px;   /* ← 여기서 크기 조절 가능 */
       width: auto;
-      object-fit: contain;
-      opacity: 0.95;
-      user-select: none;
+      display: block;
     }
 
     /* ===== HERO ===== */
@@ -69,7 +68,6 @@
       overflow: hidden;
     }
 
-    /* ✅ 포스터 느낌 오버레이(비네팅 + 상하 그라데이션) */
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -137,45 +135,32 @@
     /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      padding: 42px 30px;
+      padding: 36px 30px;
       background: rgba(10,10,10,0.98);
       border-top: 1px solid rgba(255,255,255,0.06);
     }
 
     .footer-text {
       font-family: var(--font-body);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 300;
       color: rgba(255,255,255,0.55);
       line-height: 1.8;
       letter-spacing: 0.05em;
     }
 
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      header { padding: 18px 0; }
-      .logo { height: 24px; }
-      .hero-content { padding: 0 22px; }
-      .hero-subtitle { margin-bottom: 34px; }
-      .hero-divider { margin-bottom: 34px; }
-      footer { padding: 34px 22px; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-content { padding: 0 18px; }
-      .hero-description { line-height: 1.75; }
+      .logo { height: 14px; }
+      header { padding: 12px 0; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Header -->
   <header>
-    <!-- ✅ 로고는 images 폴더에 업로드했다고 했으니 이 경로 -->
     <img src="images/logo.png" class="logo" alt="Dr.Juviwon Logo" />
   </header>
 
-  <!-- ✅ 배경이 무조건 뜨게: 인라인 스타일로 고정 (이미지 경로 그대로) -->
   <section
     class="hero"
     style="background-image:url('images/hero.JPG'); background-size:cover; background-position:center; background-repeat:no-repeat;"
@@ -194,7 +179,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p class="footer-text">
       Beauty Alliance., Ltd.<br />
