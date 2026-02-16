@@ -56,7 +56,10 @@
       align-items: center;
     }
 
-    .logo-link { text-decoration: none; display: inline-block; }
+    .logo-link {
+      text-decoration: none;
+      display: inline-block;
+    }
 
     .logo {
       height: 14px;
@@ -76,7 +79,6 @@
       overflow: hidden;
     }
 
-    /* ✅ 더 어둡게: 텍스트 가독성 강화 */
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -116,7 +118,7 @@
       letter-spacing: 0.02em;
       line-height: 1.1;
       margin-bottom: 20px;
-      text-shadow: 0 15px 40px rgba(0,0,0,0.6); /* ✅ 더 또렷 */
+      text-shadow: 0 15px 40px rgba(0,0,0,0.6);
     }
 
     .hero-subtitle {
@@ -125,15 +127,8 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--white-80);
-      margin-bottom: 50px;
+      margin-bottom: 35px;
       text-shadow: 0 10px 28px rgba(0,0,0,0.45);
-    }
-
-    .hero-divider {
-      width: 60px;
-      height: 1px;
-      background: rgba(255,255,255,0.55);
-      margin: 0 auto 50px;
     }
 
     .hero-description {
@@ -188,7 +183,6 @@
     <div class="hero-content">
       <h1 class="hero-title">Available across Europe — April 2026</h1>
       <p class="hero-subtitle">Dr.Juviwon Laboratory</p>
-      <div class="hero-divider"></div>
       <p class="hero-description">
         A Korean skincare innovation, developed through advanced formulation science and carefully
         tailored to European climate, water composition, and skin biology — bringing a new standard to
@@ -211,4 +205,5 @@
 
 </body>
 </html>
+
 
