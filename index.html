@@ -45,20 +45,24 @@
       backdrop-filter: blur(2px);
     }
 
-    /* 안쪽 정렬 컨테이너 */
     .header-inner {
       max-width: 1200px;
       margin: 0 auto;
       padding: 12px 24px;
 
       display: flex;
-      justify-content: flex-start;  /* ✅ 확실히 왼쪽 정렬 */
+      justify-content: flex-start;
       align-items: center;
     }
 
-    /* 로고 크기 확실히 줄임 */
+    /* ✅ 로고 링크(밑줄 제거) */
+    .logo-link {
+      display: inline-block;
+      text-decoration: none;
+    }
+
     .logo {
-      height: 14px;     /* ✅ 필요하면 12~18 사이로 조절 */
+      height: 14px;
       width: auto;
       display: block;
     }
@@ -166,7 +170,9 @@
 <body>
   <header>
     <div class="header-inner">
-      <img src="images/logo.png" alt="Dr.Juviwon Logo" class="logo" />
+      <a href="/" class="logo-link" aria-label="Go to homepage">
+        <img src="images/logo.png" alt="Dr.Juviwon Logo" class="logo" />
+      </a>
     </div>
   </header>
 
@@ -196,3 +202,4 @@
   </footer>
 </body>
 </html>
+
