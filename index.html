@@ -54,9 +54,8 @@
       margin: 0 auto;
       padding: 12px 24px;
       display: flex;
-      justify-content: space-between; /* ✅ 좌/우 정렬 */
+      justify-content: flex-start;  /* 로고만 왼쪽 */
       align-items: center;
-      gap: 16px;
     }
 
     .logo-link {
@@ -68,17 +67,6 @@
       height: 14px;
       width: auto;
       display: block;
-    }
-
-    /* ✅ 오른쪽 상단 텍스트 */
-    .header-right {
-      font-family: var(--font-nav);
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      color: var(--white-80);
-      text-transform: uppercase;
-      white-space: nowrap;
-      user-select: none;
     }
 
     /* ===== HERO ===== */
@@ -177,7 +165,6 @@
     @media (max-width: 768px) {
       .header-inner { padding: 10px 16px; }
       .logo { height: 12px; }
-      .header-right { font-size: 11px; letter-spacing: 0.12em; }
     }
   </style>
 </head>
@@ -189,8 +176,6 @@
       <a href="/" class="logo-link" aria-label="Go to homepage">
         <img src="images/logo.png" alt="Dr.Juviwon Logo" class="logo" />
       </a>
-
-      <div class="header-right">EU Launch 2026</div>
     </div>
   </header>
 
@@ -230,6 +215,3 @@
 
 </body>
 </html>
-
-
-
